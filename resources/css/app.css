@@ -1,48 +1,7 @@
-/* Reset de estilos básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  html, body {
-    height: 100%;
-    font-size: 100%;
-    line-height: 1.5;
-  }
-
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  img, picture, video, canvas {
-    display: block;
-    max-width: 100%;
-  }
-
-  input, button, textarea, select {
-    font: inherit;
-    outline: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  ul, ol {
-    list-style: none;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  blockquote, q {
-    quotes: none;
-  }
-
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-  }
+[x-cloak] {
+    display: none;
+}

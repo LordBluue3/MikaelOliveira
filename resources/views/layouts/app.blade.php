@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<head>
-    <meta charset="utf-8">
-    <title>@yield('title', 'Mikael Oliveira')</title>
-    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Mikael Oliveira Candido Cerqueira">
-    <meta name="description" content="@yield('description', 'Seja bem vindo, aqui você vai poder conhecer um pouco sobre mim e ler alguns posts que escrevi.')">
-    <meta name="keywords" content="@yield('keywords', 'Mikael Oliveira, blog, desenvolvimento, tecnologia, posts, Laravel, Livewire, faculdade')">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-    <!-- Open Graph - Facebook e LinkedIn -->
-    <meta property="og:title" content="@yield('og:title', 'Mikael Oliveira')">
-    <meta property="og:description" content="@yield('og:description', 'Conheça mais sobre mim e leia meus posts sobre desenvolvimento e tecnologia.')">
-    <meta property="og:image" content="@yield('og:image', asset('assets/images/cat.png'))">
-    <meta property="og:url" content="@yield('og:url', 'mikaeloliveira.com.br')">
-    <meta property="og:type" content="website">
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="@yield('twitter:title', 'Mikael Oliveira')">
-    <meta name="twitter:description" content="@yield('twitter:description', 'Conheça mais sobre mim e leia meus posts sobre desenvolvimento e tecnologia.')">
-    <meta name="twitter:image" content="@yield('twitter:image', asset('assets/images/cat.png'))">
+        <!-- Styles -->
+        @livewireStyles
+    </head>
+    <body class="font-sans antialiased">
+        <x-banner />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <div class="min-h-screen bg-gray-100">
+            @livewire('navigation-menu')
 
-    <!-- Styles -->
-    @vite(['resources/css/app.css'])
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @yield('styles')
-    </style>
-</head>
+            <!-- Page Heading -->
+            @if (isset($header))
+                <header class="bg-white shadow">
+                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endif
 
-<body>
-    @yield('content')
-    @yield('scripts')
-</body>
+            <!-- Page Content -->
+            <main>
+                {{ $slot }}
+            </main>
+        </div>
 
+        @stack('modals')
+
+        @livewireScripts
+    </body>
 </html>

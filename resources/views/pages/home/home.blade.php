@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-home')
 
 @section('title', 'Minha casa na Internet • Mikael Oliveira')
 

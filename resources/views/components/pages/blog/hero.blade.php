@@ -5,7 +5,7 @@
             <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                 <div class="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                     <img class="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                        src="https://private-user-images.githubusercontent.com/58037508/285323666-1dd0e99b-17d9-404c-92a0-ebac4b0946d0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY3OTg3NDYsIm5iZiI6MTcyNjc5ODQ0NiwicGF0aCI6Ii81ODAzNzUwOC8yODUzMjM2NjYtMWRkMGU5OWItMTdkOS00MDRjLTkyYTAtZWJhYzRiMDk0NmQwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTIwVDAyMTQwNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTNlMjMzM2VkNWJmNmJiMDcwOWRiNTEyYTY1OWQ4ZjJmYzBjY2I2NDVlMTNkNzdlNzc2M2E1M2U4MGE5NjMxZjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.CzACKR5oWOAN2K1H3pKGOf9PahZM4KC8OBVzy2u5z-E"
+                        src="https://cdn.discordapp.com/attachments/701489669673844887/1286526219512446987/285323666-1dd0e99b-17d9-404c-92a0-ebac4b0946d0.png?ex=66ee3a69&is=66ece8e9&hm=0edc452332e22f6dc5caa5f9265acb7572ab567201c7e14d26c741687920913e&"
                         alt="">
                 </div>
             </div>
