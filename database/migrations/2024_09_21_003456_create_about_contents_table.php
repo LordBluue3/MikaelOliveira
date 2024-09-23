@@ -27,22 +27,22 @@ return new class extends Migration
             $table->string('title_1');
             $table->text('description_1');
 
-            $table->string('subtitle');
-            $table->string('text');
-
             $table->string('subtitle_1');
             $table->string('text_1');
 
-            $table->string('subtitle_1');
-            $table->string('text_1');
+            $table->string('subtitle_2');
+            $table->string('text_2');
 
-            $table->string('subtitle_1');
-            $table->string('text_1');
+            $table->string('subtitle_3');
+            $table->string('text_3');
+
+            $table->string('subtitle_4');
+            $table->string('text_4');
 
             $table->json('timeline');
 
-            $table->string('title');
-            $table->text('description');
+            $table->string('title_2');
+            $table->text('description_2');
 
             $table->json('technology');
             $table->timestamps();
