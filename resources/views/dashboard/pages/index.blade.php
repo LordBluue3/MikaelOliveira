@@ -12,8 +12,8 @@
                     <div class="px-4 sm:px-6 lg:px-8">
                         <div class="sm:flex sm:items-center">
                             <div class="sm:flex-auto">
-                                <h1 class="text-base font-semibold leading-6 text-gray-900">Páginas do site</h1>
-                                <p class="mt-2 text-sm text-gray-700">Aqui você pode gerenciar todas as páginas do seu
+                                <h1 class="text-3xl font-semibold leading-6 text-gray-900">Páginas do site</h1>
+                                <p class="mt-2 text-base text-gray-700">Aqui você pode gerenciar todas as páginas do
                                     site</p>
                             </div>
                             <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
@@ -39,25 +39,27 @@
                                                     class="px-3 py-3 text-xs font-medium tracking-wide text-left text-gray-500 uppercase">
                                                     Acessos</th>
                                                 <th scope="col" class="relative py-3 pl-3 pr-4 sm:pr-0">
-                                                    <span class="sr-only">Edit</span>
+                                                    <span class="sr-only">Editar</span>
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white divide-y divide-gray-200">
+                                            @foreach ($pages as $page )
                                             <tr>
                                                 <td
                                                     class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">
-                                                    home</td>
-                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">https://localhost/home</td>
+                                                    {{$page->name}}</td>
+                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{$page->url}}</td>
 
-                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">0
+                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{$page->access}}
                                                 </td>
                                                 <td
                                                     class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-0">
-                                                    <a href="#"
+                                                    <a href="{{route('dashboard.edit', $page->id)}}"
                                                         class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
